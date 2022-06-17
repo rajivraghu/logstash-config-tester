@@ -1,9 +1,11 @@
 version: '3'
 services:
   logstash:
-    image: docker.elastic.co/logstash/logstash:5.4.0
+    image: logstash:8.2.3
     volumes:
       - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./pipeline:/usr/share/logstash/pipeline
     stdin_open: true
     tty: true
+
+    
